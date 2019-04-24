@@ -2,7 +2,7 @@
 ### 功能
 - 在线获取股票信息
 ### 效果
-![主窗口](https://github.com/ColmonBai/stock_market_viewer/blob/master/images/mainwindow.PNG)
+![主窗口](https://github.com/ColmonBai/stock_market_viewer/blob/master/images/main.PNG)
 ### 使用
 - 打开./Viewer/Viewer.pro
 - 配置编译器，编译工程
