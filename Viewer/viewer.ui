@@ -6,16 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>600</width>
-    <height>400</height>
+    <width>800</width>
+    <height>647</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Viewer</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="viewer.qrc">
+   <iconset>
     <normaloff>:/Viewer/img/main_logo.ico</normaloff>:/Viewer/img/main_logo.ico</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -264,10 +267,41 @@
        <number>0</number>
       </property>
       <item>
-       <widget class="QTableWidget" name="buyTableWidget"/>
+       <widget class="QTableWidget" name="buyTableWidget">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>180</height>
+         </size>
+        </property>
+       </widget>
       </item>
       <item>
        <widget class="QTableWidget" name="sellTableWidget"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QLabel" name="timeLineLabel">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>250</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>分时线</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="dayKLineLabel">
+        <property name="text">
+         <string>日k线</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
@@ -278,7 +312,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>600</width>
+     <width>800</width>
      <height>23</height>
     </rect>
    </property>
@@ -294,9 +328,7 @@
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources>
-  <include location="viewer.qrc"/>
- </resources>
+ <resources/>
  <connections/>
  <slots>
   <signal>signal1()</signal>

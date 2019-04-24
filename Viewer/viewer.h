@@ -2,6 +2,7 @@
 #define VIEWER_H
 
 #include <QtWidgets/QMainWindow>
+#include <QPixmap>
 #include "ui_viewer.h"
 #include "ViewerContent.h"
 

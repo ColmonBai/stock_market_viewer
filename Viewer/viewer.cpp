@@ -116,4 +116,15 @@ void Viewer::updateViewer(ViewerContent vct)
 		cnt++;
 	}
 
+    QPixmap pixmap;
+    pixmap = vct.get_timeLinePixmap();
+    pixmap.scaled(ui.timeLineLabel->size(), Qt::KeepAspectRatio);
+    ui.timeLineLabel->setScaledContents(true);
+    ui.timeLineLabel->setPixmap(pixmap);
+
+    pixmap = vct.get_dayKLinePixmap();
+    pixmap.scaled(ui.dayKLineLabel->size(), Qt::KeepAspectRatio);
+    ui.dayKLineLabel->setScaledContents(true);
+    ui.dayKLineLabel->setPixmap(pixmap);
+
 }

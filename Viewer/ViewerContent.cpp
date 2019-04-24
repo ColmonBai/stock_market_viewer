@@ -26,16 +26,19 @@ void ViewerContent::SetFromSinaAPI(QString urlStr)
 	sfAPI.requestStockInfo(urlStr);
 	QString stockInfo = sfAPI.getStockInfoString();
 
+    QString symbol = urlStr.mid(27,6);
+
+    sfAPI.downloadFromUrl("http://image.sinajs.cn/newchart/min/n/sh"
+                          + symbol +".gif");
+    m_timeLinePixmap = sfAPI.getPic();
+
+    sfAPI.downloadFromUrl("http://image.sinajs.cn/newchart/daily/n/sh"
+                          + symbol +".gif");
+    m_dayKLinePixmap = sfAPI.getPic();
 
 	m_stockCode=stockInfo.mid(11, 8);
 	m_stockName=stockInfo.mid(21, 4);
-    qDebug()<<m_stockName;
 
-    char*  ch;
-    QByteArray ba = m_stockName.toLatin1(); // must
-    ch=ba.data();
-    std::cout<<"Name str: "<< ch<<endl;
-    std::printf("%d\n",ch);
 
 	m_openingPrice=stockInfo.section(',',1,1);
 	m_current=stockInfo.section(',',3,3);

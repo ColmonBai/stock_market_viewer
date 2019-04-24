@@ -1,6 +1,7 @@
 #pragma once
 #include <QString>
 #include <QMap>
+#include <QPixmap>
 
 class ViewerContent
 {
@@ -28,6 +29,9 @@ public:
 
 	QMap<QString, QString> get_buyMap(){return m_buyMap;}
 	QMap<QString, QString> get_sellMap(){return m_sellMap;}
+
+    QPixmap get_timeLinePixmap(){return m_timeLinePixmap;}
+    QPixmap get_dayKLinePixmap(){return m_dayKLinePixmap;}
 private:
 	QString m_stockCode;
 	QString m_stockName;
@@ -48,5 +52,8 @@ private:
 
 	QMap<QString,QString> m_buyMap;
 	QMap<QString,QString> m_sellMap;
+
+    QPixmap m_timeLinePixmap;
+    QPixmap m_dayKLinePixmap;
 	
 };
